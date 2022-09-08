@@ -18,9 +18,9 @@ def verificar(mensaje, firma):
         is_verify=verifier.verify(digest, base64.b64decode(firma))
 
     if is_verify:
-        print('Los Hash coinciden \nAutor Legitimo')
+        print('Los Hash coinciden, Autor original')
     else:
-        print('Los Hash no son iguales \nFirma Ilegal')
+        print('Los Hash no son iguales, Firma falsa')
 
 with open('datos.txt', 'r') as f1:
     mensaje=f1.read()
